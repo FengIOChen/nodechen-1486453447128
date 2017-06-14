@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 <link rel="stylesheet" href="css/common.css" type="text/css" />
-<title>¹ÜÀíÇøÓò</title>
+<title>管理区域</title>
 <style type="text/css">
 <!--
 .STYLE1 {color: #FF0000}
@@ -12,7 +12,7 @@
 <script type="text/javascript" language="javascript">
 function link1(){
    if(document.fom.jobid.value==""){
-    	alert("ÄúÃ»ÓÐÊäÈë¸ÚÎ»±àºÅ");
+    	alert("您没有输入岗位编号");
 		return false;
 		
    }
@@ -20,16 +20,16 @@ function link1(){
    for(var i=0;i< document.fom.jobid.value.length;i++){
 			var ch = document.fom.jobid.value.charAt(i);
 			if(ch<"0" || ch>"9"){
-				alert("¸ÚÎ»±àºÅÎªÊý×Ö");
+				alert("岗位编号为数字");
 				return false;
 			}
 			}
    if(document.fom.jobname.value==""){
-   	alert("ÄúÃ»ÓÐÊäÈë¸ÚÎ»Ãû³Æ");
+   	alert("您没有输入岗位名称");
 	return false;
    }
     if(document.fom.size.value==""){
-   	alert("¸ÚÎ»±àÖÆ²»ÄÜÎª¿Õ£¡");
+   	alert("岗位编制不能为空！");
 	return false;
    }
    
@@ -44,24 +44,24 @@ function link1(){
     <div class="MainDiv">
       <table width="99%" border="0" cellpadding="0" cellspacing="0" class="CContent">
         <tr>
-          <th class="tablestyle_title" ><div align="left">¸ÚÎ»Ìí¼ÓÒ³Ãæ</div></th>
+          <th class="tablestyle_title" ><div align="left">岗位添加页面</div></th>
         </tr>
         <tr>
           <td class="CPanel"><table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
               <tr class="CTitle" >
-                <td height="22" colspan="10" align="center" style="font-size:16px" >Ìí ¼Ó ¸Ú Î»</td>
+                <td height="22" colspan="10" align="center" style="font-size:16px" >添 加 岗 位</td>
               </tr>
               <tr bgcolor="#EEEEEE">
-                <td colspan="2" align="center"><div align="center">ÐòºÅ</div>
+                <td colspan="2" align="center"><div align="center">序号</div>
                 <div align="center"></div></td>
-                <td width="94" height="30"><div align="center">¸ÚÎ»±àºÅ<span class="STYLE1">*</span></div></td>
-                <td width="120"><div align="center">¸ÚÎ»Ãû³Æ<span class="STYLE1">*</span></div></td>
-                <td width="84"><div align="center">ÀàÐÍ</div></td>
-                <td width="154"><div align="center">ËùÊô²¿ÃÅ</div></td>
-                <td width="102"><div align="center">²¿ÃÅ±àºÅ</div></td>
-                <td width="112"><div align="center">¸ÚÎ»±àÖÆ<span class="STYLE1">*</span></div></td>
-                <td width="112"><div align="center">±àÖÆÏÞ¶¨<span class="STYLE1">*</span></div></td>
-                <td width="226"><div align="center">²Ù×÷</div></td>
+                <td width="94" height="30"><div align="center">岗位编号<span class="STYLE1">*</span></div></td>
+                <td width="120"><div align="center">岗位名称<span class="STYLE1">*</span></div></td>
+                <td width="84"><div align="center">类型</div></td>
+                <td width="154"><div align="center">所属部门</div></td>
+                <td width="102"><div align="center">部门编号</div></td>
+                <td width="112"><div align="center">岗位编制<span class="STYLE1">*</span></div></td>
+                <td width="112"><div align="center">编制限定<span class="STYLE1">*</span></div></td>
+                <td width="226"><div align="center">操作</div></td>
               </tr>
               <tr bgcolor="#FFFFFF">
                 <td colspan="2" align="center"><div align="center">1</div></td>
@@ -77,10 +77,10 @@ function link1(){
                 </div></td>
                 <td><div align="center">
                     <select name="select">
-                      <option value="¹ÜÀí">¹ÜÀí</option>
-                      <option value="¼¼Êõ">¼¼Êõ</option>
-                      <option value="ÓªÏú">ÓªÏú</option>
-                      <option value="ÊÐ³¡">ÊÐ³¡</option>
+                      <option value="管理">管理</option>
+                      <option value="技术">技术</option>
+                      <option value="营销">营销</option>
+                      <option value="市场">市场</option>
                     </select>
                 </div></td>
                 <td><div align="center">
@@ -99,17 +99,17 @@ function link1(){
                 <td><div align="center">
                   <label>
                   <select name="select2">
-                    <option value="ÊÇ">ÊÇ</option>
-                    <option value="·ñ">·ñ</option>
+                    <option value="是">是</option>
+                    <option value="否">否</option>
                      </select>
                   </label>
                 </div></td>
                 <td><div align="center">
                   <label>
-                  <input name="Submit" type="submit" value="±£´æ">
+                  <input name="Submit" type="submit" value="保存">
                   </label>
                   <label>
-                  <input name="reset" type="reset" value="È¡Ïû" />
+                  <input name="reset" type="reset" value="取消" />
                   </label>
 </div></td>
               </tr>
