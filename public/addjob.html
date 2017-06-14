@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<title>¹ÜÀíÇøÓò</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+-->
+</style>
+<script type="text/javascript" language="javascript">
+function link1(){
+   if(document.fom.jobid.value==""){
+    	alert("ÄúÃ»ÓÐÊäÈë¸ÚÎ»±àºÅ");
+		return false;
+		
+   }
+   
+   for(var i=0;i< document.fom.jobid.value.length;i++){
+			var ch = document.fom.jobid.value.charAt(i);
+			if(ch<"0" || ch>"9"){
+				alert("¸ÚÎ»±àºÅÎªÊý×Ö");
+				return false;
+			}
+			}
+   if(document.fom.jobname.value==""){
+   	alert("ÄúÃ»ÓÐÊäÈë¸ÚÎ»Ãû³Æ");
+	return false;
+   }
+    if(document.fom.size.value==""){
+   	alert("¸ÚÎ»±àÖÆ²»ÄÜÎª¿Õ£¡");
+	return false;
+   }
+   
+  
+   }
+</script>
+</head>
+
+<body>
+<div id="man_zone">
+  <form action="sec1.html" method="post" enctype="multipart/form-data" name="fom" id="fom" target="manFrame" onsubmit="return link1();">
+    <div class="MainDiv">
+      <table width="99%" border="0" cellpadding="0" cellspacing="0" class="CContent">
+        <tr>
+          <th class="tablestyle_title" ><div align="left">¸ÚÎ»Ìí¼ÓÒ³Ãæ</div></th>
+        </tr>
+        <tr>
+          <td class="CPanel"><table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
+              <tr class="CTitle" >
+                <td height="22" colspan="10" align="center" style="font-size:16px" >Ìí ¼Ó ¸Ú Î»</td>
+              </tr>
+              <tr bgcolor="#EEEEEE">
+                <td colspan="2" align="center"><div align="center">ÐòºÅ</div>
+                <div align="center"></div></td>
+                <td width="94" height="30"><div align="center">¸ÚÎ»±àºÅ<span class="STYLE1">*</span></div></td>
+                <td width="120"><div align="center">¸ÚÎ»Ãû³Æ<span class="STYLE1">*</span></div></td>
+                <td width="84"><div align="center">ÀàÐÍ</div></td>
+                <td width="154"><div align="center">ËùÊô²¿ÃÅ</div></td>
+                <td width="102"><div align="center">²¿ÃÅ±àºÅ</div></td>
+                <td width="112"><div align="center">¸ÚÎ»±àÖÆ<span class="STYLE1">*</span></div></td>
+                <td width="112"><div align="center">±àÖÆÏÞ¶¨<span class="STYLE1">*</span></div></td>
+                <td width="226"><div align="center">²Ù×÷</div></td>
+              </tr>
+              <tr bgcolor="#FFFFFF">
+                <td colspan="2" align="center"><div align="center">1</div></td>
+                <td height="20" ><div align="center">
+                  <label>
+                  <input name="jobid" type="text" size="10" />
+                  </label>
+                </div></td>
+                <td ><div align="center">
+                  <label>
+                  <input name="jobname" type="text" size="16" />
+                  </label>
+                </div></td>
+                <td><div align="center">
+                    <select name="select">
+                      <option value="¹ÜÀí">¹ÜÀí</option>
+                      <option value="¼¼Êõ">¼¼Êõ</option>
+                      <option value="ÓªÏú">ÓªÏú</option>
+                      <option value="ÊÐ³¡">ÊÐ³¡</option>
+                    </select>
+                </div></td>
+                <td><div align="center">
+                  <label>
+                  <input name="textfield3" type="text" size="10" />
+                  </label>
+                </div></td>
+                <td><div align="center"><label>
+                  <input name="textfield5" type="text" size="10" />
+                </label></div></td>
+                <td><div align="center">
+                    <label>
+                    <input name="size" type="text" size="10" value="0" />
+                    </label>
+                </div></td>
+                <td><div align="center">
+                  <label>
+                  <select name="select2">
+                    <option value="ÊÇ">ÊÇ</option>
+                    <option value="·ñ">·ñ</option>
+                     </select>
+                  </label>
+                </div></td>
+                <td><div align="center">
+                  <label>
+                  <input name="Submit" type="submit" value="±£´æ">
+                  </label>
+                  <label>
+                  <input name="reset" type="reset" value="È¡Ïû" />
+                  </label>
+</div></td>
+              </tr>
+          </table></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+</body>
+</html>
